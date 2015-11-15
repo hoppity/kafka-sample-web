@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "config-node": "^1.2.2",
+    "redis": "^2.3.0"
+  }
 }
