@@ -8,6 +8,16 @@ import StockListItem from './StockListItem';
 class StockList extends React.Component {
 
     /*
+    * @constructs StockList
+    */
+    constructor () {
+        super();
+
+        this.socket = io();
+        this.socket.on('stock', (items) => this._update(items));
+    }
+
+    /*
     * @method render
     * @returns {JSX}
     */
@@ -25,6 +35,10 @@ class StockList extends React.Component {
                 })}
             </tbody>
         </table>;
+    }
+
+    _update (items) {
+        items.forEach(i => { /* TODO: upsert */ });
     }
 
 }
